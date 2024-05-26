@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cone {
+  width: 10px;
+  height: 100px;
+  /* overflow: hidden; */
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid rgba(231, 231, 75, 0.478);
+  border-radius: 50px;
+  transition: 0.3s ease-in;
+}
+/* 
+.cone:hover {
+  border-bottom: 140px solid rgba(231, 231, 75, 0.478);
+} */
+
+.cone-show {
+  animation: border 0.4s;
+  animation-fill-mode: forwards;
+  transition: 0.3s linear;
+}
+
+@keyframes border {
+  0% {
+    border-bottom: 100px solid rgba(231, 231, 75, 0.378);
+  }
+  100% {
+    border-bottom: 260px solid rgba(231, 231, 75, 0.378);
+  }
+}
